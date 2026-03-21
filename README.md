@@ -78,7 +78,6 @@ python migration_agent_new.py --from-files
 |---|---|
 | `qbd_auto_extract.py` | Connects to QBD via COM and exports data to Excel |
 | `migration_agent_new.py` | Main 4-phase ETL agent (extract → transform → load → validate) |
-| `migration_agent.py` | Earlier version (v1) — kept for reference |
 | `MIGRATION_RECIPE.md` | Full data mapping tables, run modes, troubleshooting |
 | `PREFLIGHT_CHECKLIST.md` | Everything to configure before running |
 | `.env.example` | Template for your Acumatica credentials |
@@ -150,13 +149,15 @@ See [PREFLIGHT_CHECKLIST.md](PREFLIGHT_CHECKLIST.md) for the complete list.
 
 ## Contributing
 
-PRs welcome. Areas most useful for the construction community:
+This is a work in progress. The core migration (GL accounts, customers, jobs → projects, vendors) works. We're continuously improving entity coverage and would love community input, especially on:
 
 - Acumatica endpoint version compatibility (2021+, 2022+)
-- Job cost / WIP account migration
-- Subcontractor certificate of insurance field mapping
-- AIA billing schedule import
-- Additional QB edition support (Enterprise, MAC)
+- Additional QB edition support (Enterprise, Mac)
+- Employee migration (currently blocked by required Acumatica defaults)
+- AP Bills and AR Invoice automation (currently requires manual Acumatica pre-configuration)
+- Opening balance journal automation
+
+PRs and issue reports from consultants running real migrations are especially welcome.
 
 ---
 
