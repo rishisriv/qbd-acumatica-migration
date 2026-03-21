@@ -1,0 +1,33 @@
+# Credentials — never commit these
+.env
+
+# Real client data — keep off GitHub
+QBD_*.xlsx
+qbd_exports/
+migration_workspace/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Legacy versions (kept locally for reference only)
+old_migration_agent.py
+migration_agent.py
+
+# Replaced by PREFLIGHT_CHECKLIST.md
+preflight_checklist.docx
